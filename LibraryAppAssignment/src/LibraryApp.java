@@ -189,13 +189,11 @@ public class LibraryApp {
 		Pattern pattern = Pattern.compile(regexDecimalPattern);
 		Matcher matcher = pattern.matcher(stringNumber);
 		
-		if(matcher.matches()) {
-			//System.out.println(stringNumber + "is match");
+		if(matcher.matches()) {	
 			return true;
 			
 		}
 		else if (stringNumber.contains(hasSpecial)) {
-			//System.out.println(stringNumber + " Is not a match");
 			return false;
 		}
 		else {
@@ -228,14 +226,6 @@ public class LibraryApp {
 	
 	
 	
-	/** Someday.... methods
-	public void getTopTen() {
-		  
-		
-	}
-	public void getTopThreeKnn() {
-		//Someday....
-	}
-*/
+
 
 }
