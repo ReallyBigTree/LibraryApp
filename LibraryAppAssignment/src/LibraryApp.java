@@ -17,12 +17,10 @@ public class LibraryApp {
 	static HashMap<String, Book> bookMap = new HashMap<String, Book>();
 	static Book book;
 
-	public static void main(String[] args) throws IOException {
-		
+	public static void main(String[] args) throws IOException {		
 		readBooksFromCSV();
 		insertionSortByLowRating(bookList);
 		insertionSortByHighRating(bookList);
-		
 		measurePerformance();
 		
 

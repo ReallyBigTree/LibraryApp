@@ -169,6 +169,11 @@ public class LibFrame extends JFrame {
 		JButton btnSearchISBN = new JButton("Search");
 		btnSearchISBN.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				searchISBNEvent(lblLookupAuthor, lblLookupTitle, lblLookupRating);
+
+			}
+
+			private void searchISBNEvent(JLabel lblLookupAuthor, JLabel lblLookupTitle, JLabel lblLookupRating) {
 				HashMap<String, Book> bookMap = new HashMap<String, Book>();
 				String isbn = txtISBN.getText();
 				Book book = new Book();
@@ -193,7 +198,6 @@ public class LibFrame extends JFrame {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
-
 			}
 		});
 		btnSearchISBN.setBounds(375, 16, 89, 23);
