@@ -169,11 +169,11 @@ public class LibFrame extends JFrame {
 		JButton btnSearchISBN = new JButton("Search");
 		btnSearchISBN.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				searchISBNEvent(lblLookupAuthor, lblLookupTitle, lblLookupRating);
+				lookupByISBN(lblLookupAuthor, lblLookupTitle, lblLookupRating);
 
 			}
 
-			private void searchISBNEvent(JLabel lblLookupAuthor, JLabel lblLookupTitle, JLabel lblLookupRating) {
+			private void lookupByISBN(JLabel lblLookupAuthor, JLabel lblLookupTitle, JLabel lblLookupRating) {
 				HashMap<String, Book> bookMap = new HashMap<String, Book>();
 				String isbn = txtISBN.getText();
 				Book book = new Book();
