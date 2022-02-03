@@ -138,7 +138,7 @@ class InsertionSort {
 		int i = 0;
 		int count = 0;
 		while(i < bookList.size() &&  count < 10) {
-			if(Book.isEnglishKeyboard(bookList.get(i).author)) {
+			if(LibraryApp.isEnglishKeyboard(bookList.get(i).author)) {
 				sublist.add(bookList.get(i));
 				count++;
 			}
@@ -152,7 +152,7 @@ class InsertionSort {
 		int i = 0;
 		int count = 0;
 		while(i < bookList.size() &&  count < 10) {
-			if(Book.isEnglishKeyboard(bookList.get(i).author)) {
+			if(LibraryApp.isEnglishKeyboard(bookList.get(i).author)) {
 				sublist.add(bookList.get(i));
 				count++;
 			}
