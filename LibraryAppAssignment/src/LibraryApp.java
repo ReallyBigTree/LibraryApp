@@ -29,23 +29,13 @@ public class LibraryApp {
 	}
 
 	public static void readBooksFromCSV() throws IOException {
-			setBookAttributes();	
-			
-			//The Assignment Mentions that we can use different data structures without duplicating the code  - I'm doing that here, but..
-			//I duplicate the code to return different data structures i.e. createBookList(), createBookMap();
+			setBookAttributes();				
 			bookList.add(book);
-			bookMap.put(book.isbn, book);
-			
-			
-			
-	
-	
-		
+			bookMap.put(book.isbn, book);				
 	}
 	public static ArrayList<Book> createBookList() throws IOException{
 		setBookAttributes();
-		return bookList;
-		
+		return bookList;	
 	}
 
 	private static void setBookAttributes() throws FileNotFoundException, IOException {
@@ -183,7 +173,7 @@ public class LibraryApp {
 	}
 	
 	
-	public boolean isDecimalNumber(String stringNumber) {
+	public static boolean isDecimalNumber(String stringNumber) {
 		String hasSpecial = ":";
 		String regexDecimalPattern = "[+-]?([0-9]*[.])?[0-9]+";
 		Pattern pattern = Pattern.compile(regexDecimalPattern);
@@ -200,7 +190,7 @@ public class LibraryApp {
 			return false;
 		}
 	}
-	public boolean isIntegerNumber(String stringNumber) {
+	public static boolean isIntegerNumber(String stringNumber) {
 		String rgx = "^[0-9]*$";
 		Pattern pattern = Pattern.compile(rgx);
 		Matcher matcher = pattern.matcher(stringNumber);

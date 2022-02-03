@@ -159,8 +159,8 @@ public class Book {
 		return this.author;
 	}
 
-	public void setYear(String string) {
-		if(isIntegerNumber(string) && string != "") {
+	public void setYear(String string) throws NumberFormatException {
+		if(LibraryApp.isIntegerNumber(string) && string != "") {
 			setYear(Integer.parseInt(string));
 		}
 		else {
@@ -258,8 +258,8 @@ public class Book {
 		this.small_image_url = small_image_url;
 	}
 
-	public void setAvgRating(String string) {
-		if(isDecimalNumber(string)) {
+	public void setAvgRating(String string) throws NumberFormatException {
+		if(LibraryApp.isDecimalNumber(string)) {
 			this.strAvg_Rating = string;			
 			setAvgRating(Float.parseFloat(string));
 		}
