@@ -28,18 +28,7 @@ public class InputChecker{
         }else {
             return false;
         }
-    }
-    public static boolean isEnglishKeyboard(String string) {
-        //This is not working as intended, and the sublist contains titles and authors in other languages
-        String rgx = "[a-zA-Z0-9\\t\\n ./<>?;:\"'`!@#$%^&*()\\[\\]{}_+=|\\\\-]";
-        Pattern pattern = Pattern.compile(rgx);
-        Matcher matcher = pattern.matcher(string);
-        if(matcher.matches()) {
-            return true;
-        }else {
-            return false;
-        }
-    }
+
 
 
 
